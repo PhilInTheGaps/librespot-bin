@@ -21,10 +21,7 @@ init:
   - cargo -vV
 
 build_script:
-  - git clone https://github.com/librespot-org/librespot
-  - cd librespot
-  - git checkout tags/v0.1.1
-  - cargo build --release
+  - echo "Test"
 
 artifacts:
   - path: target\release\librespot.exe
