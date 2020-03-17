@@ -14,9 +14,6 @@ environment:
       arch: x86
 
 init:
-  - git clone https://github.com/librespot-org/librespot
-  - cd librespot
-  - git checkout tags/v0.1.1
   - appveyor DownloadFile https://win.rustup.rs/ -FileName rustup-init.exe
   - rustup-init -yv --default-toolchain %channel% --default-host %target%
   - set PATH=%PATH%;%USERPROFILE%\.cargo\bin
@@ -24,6 +21,9 @@ init:
   - cargo -vV
 
 build_script:
+  - git clone https://github.com/librespot-org/librespot
+  - cd librespot
+  - git checkout tags/v0.1.1
   - cargo build --release
 
 artifacts:
