@@ -31,5 +31,5 @@ build_script:
   - cargo build --release
 
 artifacts:
-  - path: target\release\librespot.exe
+  - path: C:\projects\librespot-bin\librespot\target\release\librespot.exe
     name: librespot-%arch%
