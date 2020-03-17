@@ -20,8 +20,12 @@ init:
   - rustc -vV
   - cargo -vV
 
+before_build:
+  - git submodule update --init --recursive
+
 build_script:
-  - echo "Test"
+  - cd librespot
+  - cargo build --release
 
 artifacts:
   - path: target\release\librespot.exe
