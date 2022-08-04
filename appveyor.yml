@@ -1,4 +1,4 @@
-version: '0.3.1-{build}'
+version: '0.4.2-{build}'
 
 os: Visual Studio 2015
 
@@ -24,6 +24,7 @@ install:
   - cargo -vV
 
 before_build:
+  - git checkout v0.4.2
   - git submodule update --init --recursive
 
 build_script:
